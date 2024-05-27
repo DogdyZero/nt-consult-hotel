@@ -5,4 +5,4 @@ notificacao-handler/package-lock.json
 docker-compose-test.yaml
 hotelaria.dockerfile
 node.dockerfile
-infraestrura/target
+infrastructure/target

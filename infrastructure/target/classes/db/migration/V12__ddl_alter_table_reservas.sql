@@ -1,1 +1,0 @@
-alter table reservas add status varchar(50) not null;
