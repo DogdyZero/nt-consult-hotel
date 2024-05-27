@@ -6,3 +6,5 @@ docker-compose-test.yaml
 hotelaria.dockerfile
 node.dockerfile
 infrastructure/target
+domain/target
+application/target
