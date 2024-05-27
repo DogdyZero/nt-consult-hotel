@@ -1,0 +1,8 @@
+notificacao-handler/node-modules
+notificacao-handler/package-lock.json
+.idea
+.mvn
+docker-compose-test.yaml
+hotelaria.dockerfile
+node.dockerfile
+infraestrura/target

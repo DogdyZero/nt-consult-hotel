@@ -1,0 +1,16 @@
+/home/murah/Workspace/POCS/ntconsult/application/src/main/java/br/com/ntconsult/hotelaria/services/QuartoServicePortImpl.java
+/home/murah/Workspace/POCS/ntconsult/application/src/main/java/br/com/ntconsult/hotelaria/ports/outgoing/HotelCombinacoesFiltroRepositoryPort.java
+/home/murah/Workspace/POCS/ntconsult/application/src/main/java/br/com/ntconsult/hotelaria/ports/outgoing/ReservaRepositoryPort.java
+/home/murah/Workspace/POCS/ntconsult/application/src/main/java/br/com/ntconsult/hotelaria/ports/incoming/HotelServicePort.java
+/home/murah/Workspace/POCS/ntconsult/application/src/main/java/br/com/ntconsult/hotelaria/services/HotelServicePortImpl.java
+/home/murah/Workspace/POCS/ntconsult/application/src/main/java/br/com/ntconsult/hotelaria/ports/incoming/QuartoServicePort.java
+/home/murah/Workspace/POCS/ntconsult/application/src/main/java/br/com/ntconsult/hotelaria/ports/outgoing/HotelRepositoryPort.java
+/home/murah/Workspace/POCS/ntconsult/application/src/main/java/br/com/ntconsult/hotelaria/ports/outgoing/ReservaEventoProducerPort.java
+/home/murah/Workspace/POCS/ntconsult/application/src/main/java/br/com/ntconsult/hotelaria/ports/outgoing/QuartoRepositoryPort.java
+/home/murah/Workspace/POCS/ntconsult/application/src/main/java/br/com/ntconsult/Main.java
+/home/murah/Workspace/POCS/ntconsult/application/src/main/java/br/com/ntconsult/hotelaria/ports/outgoing/HotelConsultaAvancadaRepositoryPort.java
+/home/murah/Workspace/POCS/ntconsult/application/src/main/java/br/com/ntconsult/hotelaria/services/ClienteServicePortImpl.java
+/home/murah/Workspace/POCS/ntconsult/application/src/main/java/br/com/ntconsult/hotelaria/services/ReservaServicePortImpl.java
+/home/murah/Workspace/POCS/ntconsult/application/src/main/java/br/com/ntconsult/hotelaria/ports/outgoing/ClienteRepositoryPort.java
+/home/murah/Workspace/POCS/ntconsult/application/src/main/java/br/com/ntconsult/hotelaria/ports/incoming/ClienteServicePort.java
+/home/murah/Workspace/POCS/ntconsult/application/src/main/java/br/com/ntconsult/hotelaria/ports/incoming/ReservaServicePort.java

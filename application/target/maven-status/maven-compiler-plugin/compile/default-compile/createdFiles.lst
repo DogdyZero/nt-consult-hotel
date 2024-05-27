@@ -1,0 +1,16 @@
+br/com/ntconsult/hotelaria/services/HotelServicePortImpl.class
+br/com/ntconsult/hotelaria/ports/outgoing/ClienteRepositoryPort.class
+br/com/ntconsult/hotelaria/ports/outgoing/HotelConsultaAvancadaRepositoryPort.class
+br/com/ntconsult/hotelaria/ports/outgoing/ReservaEventoProducerPort.class
+br/com/ntconsult/hotelaria/services/ReservaServicePortImpl.class
+br/com/ntconsult/hotelaria/ports/incoming/HotelServicePort.class
+br/com/ntconsult/hotelaria/ports/outgoing/HotelCombinacoesFiltroRepositoryPort.class
+br/com/ntconsult/hotelaria/services/QuartoServicePortImpl.class
+br/com/ntconsult/hotelaria/services/ClienteServicePortImpl.class
+br/com/ntconsult/hotelaria/ports/outgoing/QuartoRepositoryPort.class
+br/com/ntconsult/hotelaria/ports/incoming/ReservaServicePort.class
+br/com/ntconsult/Main.class
+br/com/ntconsult/hotelaria/ports/outgoing/HotelRepositoryPort.class
+br/com/ntconsult/hotelaria/ports/incoming/QuartoServicePort.class
+br/com/ntconsult/hotelaria/ports/incoming/ClienteServicePort.class
+br/com/ntconsult/hotelaria/ports/outgoing/ReservaRepositoryPort.class

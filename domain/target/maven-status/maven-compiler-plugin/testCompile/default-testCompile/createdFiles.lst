@@ -1,0 +1,11 @@
+br/com/ntconsult/hotelaria/model/valueobjects/CodigoTest.class
+br/com/ntconsult/hotelaria/model/valueobjects/ContatoTest.class
+br/com/ntconsult/hotelaria/model/valueobjects/PrecoTest.class
+br/com/ntconsult/hotelaria/model/valueobjects/HospedesTest.class
+br/com/ntconsult/hotelaria/model/valueobjects/CPFTest.class
+br/com/ntconsult/hotelaria/model/valueobjects/TotalReservaTest.class
+br/com/ntconsult/hotelaria/model/valueobjects/DiariaTest.class
+br/com/ntconsult/hotelaria/model/valueobjects/NomeTest.class
+br/com/ntconsult/hotelaria/model/valueobjects/DescontoTest.class
+br/com/ntconsult/hotelaria/model/valueobjects/AvaliacaoTest.class
+br/com/ntconsult/hotelaria/model/valueobjects/EmailTest.class
