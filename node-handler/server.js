@@ -7,17 +7,30 @@ const routingResponse = "notificacao-response-routing-key"
 const queueRequest = "notificacao-request-queue";
 const exchangeRequest = "notificacao-request-exchange"
 const routingRequest = "notificacao-request-routing-key";
+const RETRY_INTERVAL = 5000; // 5 segundos
 
-const rabbitHost = process.env.RABBIT_MQ_HOST || localhost
+
+const amqpUrl = process.env.AMQP_URL || 'amqp://localhost:5673';
 console.log("Iniciado aplicação node.")
 
+async function connect() {
+    let connection;
+    while (!connection) {
+        try {
+            connection = await amqp.connect(amqpUrl);
+        } catch (err) {
+            console.log('RabbitMQ não está disponível, tentando novamente em 5 segundos...');
+            await new Promise(resolve => setTimeout(resolve, RETRY_INTERVAL));
+        }
+    }
+    return connection;
+}
 async function start() {
 
-    let connection;
-    let channel;
     try {
-        connection = await amqp.connect(`amqp://${rabbitHost}`);
-        channel = await connection.createChannel();
+        const connection = await connect();
+        if(connection) console.log("Sucessfully connect")
+        const channel = await connection.createChannel();
         await channel.assertExchange(exchangeRequest, 'direct', { durable: true });
         await channel.assertQueue(queueRequest, { durable: true });
         await channel.bindQueue(queueRequest, exchangeRequest, routingRequest);
@@ -37,8 +50,6 @@ async function start() {
 
     } catch (err) {
         console.warn("Erro ao executar. ", err);
-        if (channel)
-            await channel.close();
     }
 }
 

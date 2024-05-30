@@ -1,6 +1,7 @@
 package br.com.ntconsult.hotelaria.config;
 
 import jakarta.annotation.PostConstruct;
+import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.DirectExchange;
@@ -8,12 +9,9 @@ import org.springframework.amqp.core.Queue;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class RabbitMQConnection {
-	private AmqpAdmin amqpAdmin;
-
-	public RabbitMQConnection(AmqpAdmin amqpAdmin) {
-		this.amqpAdmin = amqpAdmin;
-	}
+	private final AmqpAdmin amqpAdmin;
 
 	private Queue fila(RabbitConfigEnum nomeFila) {
 		return new Queue(nomeFila.getValue(), true, false, false);

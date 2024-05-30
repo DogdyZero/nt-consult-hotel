@@ -14,8 +14,11 @@
 O Objetivo do teste foi testar o spring boot com a ferramenta reativa, e a integração com o RabbitMQ
 
 ## Para levantar
-- Criar o banco de dados hotelaria
 - Importar o projeto na IDE de prefência e configurar para utilizar o java 17
-- Na pasta principal, rodar o comando docker-compose up -d para levantar o rabbitMQ
-- Acessar a pasta notificacao-handler, e rodar npm i e npm run dev para levantar o serviço que simula notificações
-- OBS: posteriormente será configurado o start do node via docker
+- Na pasta principal, rodar o comando docker-compose up -d para levantar o rabbitMQ, postgres e node-handler
+
+## Ambiente Full
+- Rodar o compando `docker compose -f docker-compose-full.yaml up`
+
+## Documentação API
+- 

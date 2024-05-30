@@ -1,0 +1,60 @@
+version: '3.8'
+services:
+  rabbitmq:
+    restart: always
+    image: rabbitmq:management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASSWORD: guest
+
+  app:
+    container_name: hotelaria_app
+    restart: always
+    build:
+        context: .
+        dockerfile: hotelaria.dockerfile
+    ports:
+        - "8080:8080"
+    environment:
+        - DATABASE_URL=postgresql://db:5432/hotelaria
+        - DATABASE_USERNAME=postgres
+        - DATABASE_PASSWORD=postgres
+        - AMQP_URL=rabbitmq
+        - AMQP_PORT=5672
+        - AMQP_USERNAME=guest
+        - AMQP_PASSWORD=guest
+        - SPRING_PROFILES_ACTIVE=dev  # Define o perfil de ambiente como 'dev'
+    depends_on:
+        - db
+        - rabbitmq
+
+  db:
+    container_name: hotelaria_postgres
+    image: postgres:latest
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_DB=hotelaria
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - restaurante_postgres:/var/lib/postgresql/data
+
+  app-node:
+    restart: always
+    container_name: app-node
+    build:
+      context: .
+      dockerfile: node.dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      AMQP_URL: amqp://guest:guest@rabbitmq:5672
+    depends_on:
+      - rabbitmq
+volumes:
+  restaurante_postgres:

@@ -1,10 +1,7 @@
-notificacao-handler/node-modules
-notificacao-handler/package-lock.json
+node-handler/node-modules
+node-handler/package-lock.json
 .idea
 .mvn
-docker-compose-test.yaml
-hotelaria.dockerfile
-node.dockerfile
 infrastructure/target
 domain/target
 application/target
