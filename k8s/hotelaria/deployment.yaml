@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hotelaria-api
+  labels: 
+    app: hotelaria-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hotelaria-api
+  template:
+    metadata:
+      labels:
+        app: hotelaria-api
+    spec:
+      containers:
+      - name: hotelaria-api
+        image: public.ecr.aws/w3a4y0t6/dogtech-ntconsult-hotelaria:latest
+        ports:
+          - containerPort: 8080
+        env:
+          - name: DATABASE_URL
+            value: postgresql://postgres-service:5432/hotelaria
+          - name: AMQP_URL
+            value: rabbitmq-service
+          - name: AMQP_PORT
+            value: "5672"
+          - name: AMQP_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: secret-opaque
+                key: RABBITMQ_DEFAULT_USER
+          - name: AMQP_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: secret-opaque
+                key: RABBITMQ_DEFAULT_PASSWORD
+          - name: SPRING_PROFILES_ACTIVE
+            value: dev
+        envFrom:
+          - secretRef:
+              name: postgres-secret

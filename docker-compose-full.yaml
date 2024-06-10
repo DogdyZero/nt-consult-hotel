@@ -14,9 +14,7 @@ services:
   app:
     container_name: hotelaria_app
     restart: always
-    build:
-        context: .
-        dockerfile: hotelaria.dockerfile
+    image: public.ecr.aws/w3a4y0t6/dogtech-ntconsult-hotelaria:latest
     ports:
         - "8080:8080"
     environment:
@@ -47,9 +45,7 @@ services:
   app-node:
     restart: always
     container_name: app-node
-    build:
-      context: .
-      dockerfile: node.dockerfile
+    image: public.ecr.aws/w3a4y0t6/dogtech-node-handler
     ports:
       - "3000:3000"
     environment:
