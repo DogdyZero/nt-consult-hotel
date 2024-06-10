@@ -32,9 +32,9 @@ O Objetivo do teste foi testar o spring boot com a ferramenta wb flux (reativa),
 **Body**:
 ```json
 {
-    "nome": "Fernanda",
-    "cpf": "36474930829",
-    "email": "fer@hotmail.com"
+    "nome": "Kepi",
+    "cpf": "05974181018",
+    "email": "kepi@hotmail.com"
 }
 ```
 
