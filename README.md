@@ -25,8 +25,8 @@ O Objetivo do teste foi testar o spring boot com a ferramenta wb flux (reativa),
 - executar `sudo chmod +x run.sh` após `./run.sh` para levantar todos os ambientes
 - Obs: A configuração inicial foi feita usando o minikube local, e ainda não foi configurado a escalabilidade conforme aumentar a quantidade de requests
 
-# Documentação API
-## http://localhost:8080/clientes
+## Documentação API
+### http://localhost:8080/clientes
 **Method**: POST
 **URL**: http://localhost:8080/clientes
 **Body**:
@@ -39,12 +39,12 @@ O Objetivo do teste foi testar o spring boot com a ferramenta wb flux (reativa),
 ```
 
 
-## http://localhost:8080/clientes
+### http://localhost:8080/clientes
 **Method**: GET
 **URL**: http://localhost:8080/clientes
 
 
-## http://localhost:8080/hoteis
+### http://localhost:8080/hoteis
 **Method**: POST
 **URL**: http://localhost:8080/hoteis
 **Body**:
@@ -66,7 +66,7 @@ O Objetivo do teste foi testar o spring boot com a ferramenta wb flux (reativa),
 ```
 
 
-## Quartos - Post
+### Quartos - Post
 **Method**: POST
 **URL**: http://localhost:8080/hoteis/Jk0jGI/quartos
 **Body**:
@@ -81,17 +81,17 @@ O Objetivo do teste foi testar o spring boot com a ferramenta wb flux (reativa),
 ```
 
 
-## Hotel - Get pelo Código
+### Hotel - Get pelo Código
 **Method**: GET
 **URL**: http://localhost:8080/hoteis/XT12D4
 
 
-## Get quarto no hotel
+### Get quarto no hotel
 **Method**: GET
 **URL**: http://localhost:8080/hoteis/XT12D4/quarto/01
 
 
-## Reserva - Post
+### Reserva - Post
 **Method**: POST
 **URL**: http://localhost:8080/reservas
 **Body**:
@@ -110,27 +110,27 @@ O Objetivo do teste foi testar o spring boot com a ferramenta wb flux (reativa),
 ```
 
 
-## Get - reservas
+### Get - reservas
 **Method**: GET
 **URL**: http://localhost:8080/reservas
 
 
-## Get - Reservas - Codigo
+### Get - Reservas - Codigo
 **Method**: GET
 **URL**: http://localhost:8080/reservas/OBESNS
 
 
-## Alterar Quarto - Status Ocupado
+### Alterar Quarto - Status Ocupado
 **Method**: PATCH
 **URL**: http://localhost:8080/quartos/01/hotel/Fmp1FY/ocupado
 
 
-## Alterar Quarto - Status Disponivel
+### Alterar Quarto - Status Disponivel
 **Method**: PATCH
 **URL**: http://localhost:8080/quartos/01/hotel/XT12D4/disponivel
 
 
-## Get-Consulta hotel avançado
+### Get-Consulta hotel avançado
 **Method**: GET
 **URL**: http://localhost:8080/hoteis?numeroQuartos=1
 **Filtros**:
@@ -142,7 +142,7 @@ O Objetivo do teste foi testar o spring boot com a ferramenta wb flux (reativa),
 - numeroQuartos
 
 
-## combinacao avançada
+### combinacao avançada
 **Method**: POST
 **URL**: http://localhost:8080/hoteis/filtro
 **Body**:
